@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiveHub - Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../assets/GIVEHUB_LOGO.png" alt="Logo GiveHub">
+            </div>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="../ADD/add.html">Add</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Overlay Container di depan Slideshow -->
+    <div class="donation-container" id="donation-container">
+       
+        
+        <!-- Data donasi akan dimasukkan di sini menggunakan JavaScript -->
+    </div>
+
+    <!-- Slideshow Container -->
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <img src="../assets/POOR1.jpg" alt="Slide 1">
+        </div>
+        <div class="slides fade">
+            <img src="../assets/disasterkid2.jpg" alt="Slide 2">
+        </div>
+        <div class="slides fade">
+            <img src="../assets/war.jpeg" alt="Slide 3">
+        </div>
+        <!-- Indicator circles -->
+        <div class="indicators">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>GiveHub</h3>
+            <p>GiveHub adalah sebuah platform yang menyediakan kemudahan bagi masyarakat untuk berdonasi kepada mereka yang membutuhkan. Kami bekerja sama dengan berbagai yayasan terpercaya untuk menyalurkan bantuan Anda secara aman dan cepat.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GiveHub. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+    <script>
+       // Mengambil data donasi menggunakan fetch dari fetching.php
+       fetch('../fetching.php')
+    .then(response => response.json())
+    .then(data => {
+        const donationContainer = document.getElementById('donation-container');
+
+        
+
+        // Mengecek apakah data ada
+        if (data && data.length > 0) {
+            // Mengosongkan kontainer sebelum menambahkan data baru
+
+            // Loop untuk menampilkan setiap donasi dalam array
+            data.forEach(donasi => {
+                donationContainer.innerHTML += `
+                    <div class="donation-card">
+                        <h2>${donasi.nama_donasi}</h2>
+                        <p>${donasi.lokasi_donasi}</p>
+                        <p>${donasi.nama_yayasan}</p>
+                        <img src="${donasi.gambar}" alt="${donasi.nama_donasi}">
+                        <p>Mulai: ${donasi.tanggal_mulai}</p>
+                        <p>Selesai: ${donasi.tanggal_selesai}</p>
+                    </div>
+                `;
+            });
+        } else {
+            donationContainer.innerHTML = "<h2>Tidak ada data donasi yang ditemukan.</h2>";
+        }
+    })
+    .catch(error => console.error('Error fetching data:', error));
+
+
+    </script>
+</body>
+</html>

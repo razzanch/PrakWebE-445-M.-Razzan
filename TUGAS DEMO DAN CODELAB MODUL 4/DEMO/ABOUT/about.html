@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiveHub - Home</title>
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../assets/GIVEHUB_LOGO.png" alt="Logo GiveHub">
+            </div>
+            <ul>
+                <li><a href="../HOME/home.html">Home</a></li>
+                <li><a href="../ADD/add.html" >Add</a></li>
+                <li><a href="#" class="active">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Donation Container -->
+    <div class="donation-container" id="donation-container">
+        <!-- Accordion 1: Penjelasan GiveHub -->
+        <div class="accordion">
+            <button class="accordion-button">Apa itu GiveHub?</button>
+            <div class="accordion-content">
+                <p>GiveHub adalah sebuah platform yang menyediakan kemudahan bagi masyarakat untuk berdonasi kepada mereka yang membutuhkan. Kami bekerja sama dengan berbagai yayasan terpercaya untuk menyalurkan bantuan Anda secara aman dan cepat. Melalui GiveHub, Anda dapat dengan mudah menyumbangkan dana kepada mereka yang membutuhkan di berbagai sektor seperti bencana alam, pendidikan, dan kesejahteraan sosial.</p>
+            </div>
+        </div>
+
+        <!-- Accordion 2: Penugasan -->
+        <div class="accordion">
+            <button class="accordion-button">Penugasan</button>
+            <div class="accordion-content">
+                <p>Dalam modul ini, Anda akan mempelajari bagaimana cara mengelola dan menampilkan informasi yang berhubungan dengan sistem donasi, termasuk penggunaan struktur data dan penyimpanan informasi dalam database. Penugasan ini bertujuan untuk mengembangkan pemahaman Anda mengenai aplikasi berbasis web yang dapat memberikan dampak positif bagi masyarakat dengan cara yang praktis dan efisien.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slideshow Container -->
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <img src="../assets/POOR1.jpg" alt="Slide 1">
+        </div>
+        <div class="slides fade">
+            <img src="../assets/disasterkid2.jpg" alt="Slide 2">
+        </div>
+        <div class="slides fade">
+            <img src="../assets/war.jpeg" alt="Slide 3">
+        </div>
+        <!-- Indicator circles -->
+        <div class="indicators">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>GiveHub</h3>
+            <p>GiveHub adalah sebuah platform yang menyediakan kemudahan bagi masyarakat untuk berdonasi kepada mereka yang membutuhkan. Kami bekerja sama dengan berbagai yayasan terpercaya untuk menyalurkan bantuan Anda secara aman dan cepat.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GiveHub. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="about.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,300 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Menggunakan Poppins dari Google Fonts */
+}
+
+/* Navbar Styles */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(128, 128, 128, 0.8); /* Grey with transparency for glass effect */
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+
+}
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Menu Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Memberikan jarak yang lebih besar antar menu */
+    margin-left: auto; /* Memindahkan menu ke sebelah kanan */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600; /* Menggunakan font lebih tebal */
+    font-size: 1.2em;
+    padding: 10px 15px; /* Menambah padding untuk jarak yang nyaman */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00aaff;
+}
+
+/* Donation Container Styles */
+.donation-container {
+    position: absolute;
+    top: 20%; /* Adjust this to move the container higher */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 1000px;
+    background: rgba(0, 0, 0, 0.5); /* Ensure there's a slight transparent background */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Slideshow Styles */
+.slideshow-container {
+    position: relative;
+    overflow: hidden;
+    height: calc(150vh - 80px); /* Mengisi tinggi layar kecuali area navbar */
+    margin-top: 60px; /* Memberikan jarak dari navbar */
+}
+
+.slides {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar memenuhi seluruh kontainer */
+    object-position: center;
+}
+
+/* Indicators */
+.indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Footer Styles */
+footer {
+    background: rgba(128, 128, 128, 0.8); /* Grey with transparency for glass effect */
+    backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-family: 'Poppins', sans-serif; /* Menggunakan font yang sama di footer */
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content h3 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-content p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.socials a:hover {
+    color: #00aaff;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .logo img {
+        height: 40px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .donation-container h2 {
+        font-size: 2em;
+    }
+
+    .slideshow-container {
+        height: 120vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 30px;
+    }
+
+    .donation-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .slideshow-container {
+        height: 100vh;
+    }
+
+    .footer-content h3 {
+        font-size: 1.5em;
+    }
+}
+
+
+
+
+
+
+/* Center Content Within Container */
+.donation-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Pusatkan konten dalam container */
+    padding: 30px;
+}
+
+nav ul li a.active {
+    background: transparent; /* Membuat latar belakang menjadi transparan */
+    color: white; /* Warna teks tetap putih */
+    border-bottom: 3px solid white; /* Garis bawah putih */
+    padding-bottom: 7px; /* Memberikan sedikit ruang agar garis tidak terlalu dekat dengan teks */
+    text-decoration: none; /* Menghilangkan garis bawah default */
+}
+
+
+
+/* Tambahkan gaya untuk Accordion */
+.accordion-button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    transition: 0.3s;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.accordion-button:hover {
+    background-color: #444;
+}
+
+.accordion-content {
+    padding: 15px;
+    background-color: #f1f1f1;
+    display: none;
+    font-size: 1em;
+    color: #333;
+    border-radius: 5px;
+}
+
+.accordion.active .accordion-content {
+    display: block;
+}
+
+/* Responsive Styling for Accordion */
+@media (max-width: 768px) {
+    .accordion-button {
+        font-size: 1em;
+        padding: 12px;
+    }
+
+    .accordion-content {
+        font-size: 0.9em;
+    }
+}
+
+
+
+
