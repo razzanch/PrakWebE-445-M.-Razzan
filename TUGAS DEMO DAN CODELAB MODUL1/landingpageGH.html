@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiveHub Landing Page</title>
+    <link rel="stylesheet" href="styleslandingpageGH.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="assets/GIVEHUB_LOGO.PNG" alt="GiveHub Logo" class="logo">
+            <a href="loginGH.html" class="get-started-btn">Get Started &gt;</a>
+        </header>
+        <div class="content">
+            <h1>
+                ONE<br>
+                DONATION<br>
+                AT A TIME
+            </h1>
+
+            <p> Making a positive impact is just a tap away –<br> 
+        simply and effortlessly contribute to the well-being <br>
+        of individuals and animals in need
+            </p>
+
+            <a href="loginGH.html" class="help-btn">I Wanna Help &gt;</a>
+        </div>
+        <div class="info-box">
+            <h3>Poor Environment in Gaza</h3>
+            <p>Those children had to live everyday in a very dangerous place, a war scene in real life. They do not deserve that kind of life. If you care about them, donate in GiveHub</p>
+        </div>
+        <div class="circles">
+            <div class="circle active" onclick="changeBackground('assets/POOR1.JPG')">1</div>
+            <div class="circle" onclick="changeBackground('assets/POOR2.JPG')">2</div>
+            <div class="circle" onclick="changeBackground('assets/POOR3.JPG')">3</div>
+        </div>
+    </div>
+
+    <script>
+        function changeBackground(imagePath) {
+            document.querySelector('.container').style.backgroundImage = `url(${imagePath})`;
+
+            // Update active circle class
+            const circles = document.querySelectorAll('.circle');
+            circles.forEach(circle => circle.classList.remove('active'));
+
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

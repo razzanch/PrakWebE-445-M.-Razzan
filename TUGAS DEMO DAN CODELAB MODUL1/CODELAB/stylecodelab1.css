@@ -1,0 +1,35 @@
+h1 {
+    color: #000;
+}
+
+table{
+    border: 1px solid black
+}
+
+
+th, td {
+    border: 1px solid black;
+
+    text-align: center;
+}
+
+th {
+    background-color: yellow;
+    color: black;
+}
+
+.senin1,.senin2,.senin3 {
+    background-color: cyan;
+}
+
+.selasa1,.selasa2,.selasa3 {
+    background-color: black;
+    color: white;
+}
+
+
+.rabu1,.rabu2,.rabu3 {
+    background-color: pink;
+}
+
+
