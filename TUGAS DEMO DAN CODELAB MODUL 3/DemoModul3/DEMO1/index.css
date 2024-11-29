@@ -1,0 +1,31 @@
+body {
+    display: flex; /* Menggunakan flexbox */
+    justify-content: center; /* Memusatkan secara horizontal */
+    align-items: center; /* Memusatkan secara vertikal */
+    height: 100vh; /* Mengatur tinggi body menjadi 100% dari viewport */
+    text-align: center;
+}
+
+legend{
+    text-align: left;
+}
+
+#container {
+    display: grid;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 10px; /* Sudut melengkung */
+    background-color: #c4c4c4; /* Warna latar belakang mendekati putih */
+    margin: auto;
+}
+
+
+fieldset {
+    border: 1px solid #2b2b2b; /* Warna border */
+    padding: 10px; /* Jarak dalam fieldset */
+    margin: 20px 0; /* Jarak antara fieldset */
+    max-width: 450px; /* Lebar maksimum */
+}
+
