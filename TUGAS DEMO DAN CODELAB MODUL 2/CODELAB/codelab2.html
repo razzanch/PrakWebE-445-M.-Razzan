@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operasi Penjumlahan</title>
+    <link rel="stylesheet" href="codelab2.css">
+</head>
+<body>
+    <section>
+        <div class="maincontent">
+            <h1>Penjumlahan</h1>
+            <label for="bil1">Bilangan pertama</label>
+            <input id="bil1" type="text" name="bilangan_pertama" placeholder="Masukkan bilangan disini!" required>
+            <label for="bil2">Bilangan kedua</label>
+            <input id="bil2" type="text" name="bilangan_kedua" placeholder="Masukkan bilangan disini!" required>
+            <div class="button">
+                <button id="jumlahButton">Jumlahkan</button>
+                <button id="resetButton">Reset</button>
+            </div>
+            <h2 id="hasil">Hasil: -</h2>
+
+            <script>
+                let jumlahkan = document.getElementById("jumlahButton");
+                jumlahkan.addEventListener("click",function(){
+                    let bilangan1 = document.getElementById("bil1").value;
+                    let bilangan2 = document.getElementById("bil2").value;
+
+                    let bil1 = parseFloat(bilangan1);
+                    let bil2 = parseFloat(bilangan2);
+
+                    result=bil1+bil2;
+                    let hasiljumlah = document.getElementById("hasil")
+                    hasiljumlah.innerText = "Hasil: "+ result;
+
+                let resetall = document.getElementById("resetButton");
+                resetall.addEventListener("click", function(){
+                    let bilangan1 = document.getElementById("bil1").value = "";
+                    
+                    let bilangan2 = document.getElementById("bil2").value= "";
+                    
+                    let hasiljumlah = document.getElementById("hasil");
+                    hasiljumlah.innerText = "Hasil : -";
+
+                });
+                });
+            </script>
+            
+        </div>
+    </section>
+</body>
+</html>

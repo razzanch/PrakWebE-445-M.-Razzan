@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="codelab3.css">
+</head>
+<body>
+  <main>
+    <section>
+        <div class="content">
+            <h1>Form Pendaftaran</h1>
+            <label for="1">Nama</label>
+            <input id="1" type="text" name="nama" >
+            <label for="2">Email</label>
+            <input id="2" type="text" name="email">
+            <label for="3">Alamat Lengkap</label>
+            <textarea id="3" name="alamat" rows="4" cols="50"></textarea>
+            <button id="signup" onclick="validation()">Daftar</button>
+        </div>
+
+        <script>
+            function validation(){
+                let label1 = document.getElementById("1").value; 
+                let label2 = document.getElementById("2").value; 
+                let label3 = document.getElementById("3").value; 
+
+                if(label1 == "" || label2 == ""|| label3 == "" ){
+                    alert("Harap isi semua bidang!");
+                }else{
+                    alert("Daftar Berhasil!");
+                }
+            }
+        </script>
+    </section>
+  </main>  
+</body>
+</html>
